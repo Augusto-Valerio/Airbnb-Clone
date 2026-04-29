@@ -826,4 +826,49 @@ footer {
       display: none;
     }
   }
+
+  .property-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+
+    #property-info {
+      width: 100%;
+
+      .info-header ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .highlights-list .highlight-item {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .property-amenities .amenities-list {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    .daily-info {
+      position: static;
+      width: 100%;
+
+      .daily-wrapper .daily-header {
+        padding: 0.5rem 1rem;
+      }
+
+      .reservation-wrapper {
+        .reservation-form .inputs-group {
+          .input-wrapper:nth-child(3) {
+            grid-column: 1 / 2;
+          }
+        }
+
+        button {
+          padding: 0.8125rem 4rem;
+        }
+      }
+    }
+  }
 }
