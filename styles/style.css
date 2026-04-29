@@ -800,30 +800,36 @@ footer {
   }
 
   #hero .hero-gallery {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 15rem);
-    height: auto;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 
     img {
-      &:nth-child(1) {
-        border-radius: 0.75rem 0.75rem 0 0;
-        grid-row: 1 / 2;
-      }
-
-      &:nth-child(2) {
-        border-radius: 0 0 0 0;
-        grid-row: 2 / 3;
-      }
-
-      &:nth-child(3),
-      &:nth-child(4) {
-        display: none;
-      }
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 0.75rem;
     }
 
     .gallery-last {
-      display: none;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 0.75rem;
+      }
+
+      .show-all {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -928,5 +934,56 @@ footer {
     .footer-social {
       justify-content: center;
     }
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  #site-header .nav-wrapper {
+    padding: 0.5rem 0;
+
+    .navbar ul li {
+      font-size: 0.7rem;
+      padding: 0 0.25rem;
+    }
+
+    .nav-actions {
+      gap: 0.5rem;
+
+      a:nth-child(1) {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+      }
+
+      a:not(:first-child) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  #hero .hero-header h1 {
+    font-size: 1.2rem;
+  }
+
+  #hero .hero-gallery img {
+    max-height: 150px;
+  }
+
+  .property-wrapper {
+    gap: 1rem;
+
+    #property-info .info-header h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .daily-info .reservation-wrapper button {
+    padding: 0.8125rem 2rem;
+    font-size: 0.8rem;
   }
 }
