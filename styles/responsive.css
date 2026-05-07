@@ -1,9 +1,4 @@
-/* ============================================================
-   RESPONSIVIDADE APRIMORADA - mantém o design original intacto
-   no desktop e adapta progressivamente para telas menores.
-   ============================================================ */
 
-/* Container fluido para todas as larguras */
 .container {
   width: 100%;
   padding-inline: 1.5rem;
@@ -12,7 +7,7 @@
   .container { padding-inline: 0; }
 }
 
-/* ===== Large desktop / laptop (<= 1199px) ===== */
+
 @media (max-width: 1199px) {
   #site-header .nav-wrapper .navbar ul { width: 24rem; }
   .property-wrapper { gap: 2rem; }
@@ -20,7 +15,7 @@
   .footer-bottom { padding-inline: 1.5rem; }
 }
 
-/* ===== Tablet (<= 992px) ===== */
+
 @media (max-width: 992px) {
   #site-header .nav-wrapper .navbar { position: static; transform: none; }
   #site-header .nav-wrapper .navbar ul { width: 100%; max-width: 28rem; margin: 0 auto; }
@@ -63,7 +58,6 @@
   .footer-bottom { flex-direction: column; gap: 1rem; align-items: center; text-align: center; }
 }
 
-/* ===== Mobile (<= 640px) ===== */
 @media (max-width: 640px) {
   .container { padding-inline: 1rem; }
 
@@ -126,7 +120,7 @@
   .footer-bottom .footer-social { flex-wrap: wrap; justify-content: center; }
 }
 
-/* ===== Small mobile (<= 380px) ===== */
+
 @media (max-width: 380px) {
   #hero .hero-header h1 { font-size: 1.2rem; }
   .property-wrapper .daily-info .daily-wrapper .daily-header { padding: 0.5rem 1rem; font-size: 0.8rem; }
